@@ -1,0 +1,517 @@
+{
+  "Uuid": "ab51bc27-cb67-4cb5-8a55-eb5f9ae3570f",
+  "IsCustomNode": false,
+  "Description": "Erstellt einen einzelnen Projektparameter",
+  "Name": "parametererstellen",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [
+    {
+      "Id": "5b690471c0214b3081579a468a472da3",
+      "Name": "Gruppenname",
+      "Type": "string",
+      "Type2": "string",
+      "Value": "FaM",
+      "Description": "Erstellt eine Zeichenfolge.",
+      "SelectedIndex": 0
+    },
+    {
+      "Id": "e787d84e6d8d4195a231abfc6a8e0ae8",
+      "Name": "Name2 des Parameters",
+      "Type": "string",
+      "Type2": "string",
+      "Value": "Kostenstelle2",
+      "Description": "Erstellt eine Zeichenfolge.",
+      "SelectedIndex": 0
+    },
+    {
+      "Id": "33953d53459d4e4a9aceedf752364f1f",
+      "Name": "Gruppentyp des Parameters",
+      "Type": "selection",
+      "Type2": "dropdownSelection",
+      "Value": "autodesk.parameter.group:identityData",
+      "Description": "Wählen Sie einen Gruppentyp aus.",
+      "SelectedIndex": 58
+    },
+    {
+      "Id": "44ba57357b354836a86b694f92bca287",
+      "Name": "Exemplar oder Typ",
+      "Type": "boolean",
+      "Type2": "boolean",
+      "Value": "true",
+      "Description": "Ermöglicht die Auswahl zwischen True und False",
+      "SelectedIndex": 0
+    },
+    {
+      "Id": "099a0245cc2c4688a4fb45bf59da130b",
+      "Name": "Categories",
+      "Type": "selection",
+      "Type2": "dropdownSelection",
+      "Value": "OST_MechanicalEquipment",
+      "Description": "Alle integrierten Kategorien",
+      "SelectedIndex": 318
+    },
+    {
+      "Id": "1275988b8c4a40bb9058979a6518cc48",
+      "Name": "Typ des Parameters",
+      "Type": "selection",
+      "Type2": "dropdownSelection",
+      "Value": "autodesk.spec:spec.string",
+      "Description": "Wählen Sie einen Rohrklassentyp aus.",
+      "SelectedIndex": 134
+    },
+    {
+      "Id": "5251d19129824d689690899ec9e6b185",
+      "Name": "String",
+      "Type": "string",
+      "Type2": "string",
+      "Value": "Testtext",
+      "Description": "Erstellt eine Zeichenfolge.",
+      "SelectedIndex": 0
+    }
+  ],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "88d29cd8484343118a2ecce8b116a9c0",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "6c411145c54b4f0d99ddf9f5fa87f3a1",
+          "Name": "parameterName",
+          "Description": "Name\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "adee5dfeafa84d7abbcf539cf2997e6a",
+          "Name": "groupName",
+          "Description": "Gruppe des Parameters für die gemeinsam genutzten Parameter\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "664426886be144c883d21747289e7af2",
+          "Name": "specType",
+          "Description": "Der Typ des neuen Parameters.\n\nSpecType",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2006db17b6944541a3af3d9173ff6fc9",
+          "Name": "groupType",
+          "Description": "Der Typ der Gruppe, zu der der Parameter gehört.\n\nGroupType",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3875afd6d5ee43b3b8c7a7eaf338b820",
+          "Name": "instance",
+          "Description": "True, wenn es sich um einen Exemplarparameter handelt, andernfalls handelt es sich um einen Typenparameter\n\nbool",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e87592b6660246e29c6e1116d7354ebf",
+          "Name": "categoryList",
+          "Description": "Category[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "854f9a4bfd17420d962bebd3bdaae2b4",
+          "Name": "void",
+          "Description": "void",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Revit.Elements.Parameter.CreateProjectParameter@string,string,Revit.Elements.SpecType,Revit.Elements.GroupType,bool,Revit.Elements.Category[]",
+      "Replication": "Auto",
+      "Description": "Neuen Projektparameter in diesem aktuellen Revit-Dokument für alle gültigen Kategorien erstellen\n\nParameter.CreateProjectParameter (parameterName: string, groupName: string, specType: SpecType, groupType: GroupType, instance: bool, categoryList: Category[]): void"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.StringInput, CoreNodeModels",
+      "Id": "5b690471c0214b3081579a468a472da3",
+      "NodeType": "StringInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "dd5f77920df144fa91aafd00130b6819",
+          "Name": "",
+          "Description": "String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Erstellt eine Zeichenfolge.",
+      "InputValue": "FaM"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.StringInput, CoreNodeModels",
+      "Id": "e787d84e6d8d4195a231abfc6a8e0ae8",
+      "NodeType": "StringInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "92a2fd4f57ec49dba0508585a7ac4aea",
+          "Name": "",
+          "Description": "String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Erstellt eine Zeichenfolge.",
+      "InputValue": "Kostenstelle2"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.GroupTypes, DSRevitNodesUI",
+      "SelectedIndex": 58,
+      "SelectedString": "autodesk.parameter.group:identityData",
+      "Id": "33953d53459d4e4a9aceedf752364f1f",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2ad5429765c941d592db3bff9501392a",
+          "Name": "GroupType",
+          "Description": "Die ausgewählte GroupType",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Wählen Sie einen Gruppentyp aus."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "Id": "44ba57357b354836a86b694f92bca287",
+      "NodeType": "BooleanInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "da6416ed709247d8b02fd8da5a05e0c8",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Ermöglicht die Auswahl zwischen True und False",
+      "InputValue": true
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 318,
+      "SelectedString": "OST_MechanicalEquipment",
+      "Id": "099a0245cc2c4688a4fb45bf59da130b",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "169a03e1da7644658f3b5976250991ab",
+          "Name": "Category",
+          "Description": "Die ausgewählte Kategorie",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Alle integrierten Kategorien"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.SpecTypes, DSRevitNodesUI",
+      "SelectedIndex": 134,
+      "SelectedString": "autodesk.spec:spec.string",
+      "Id": "1275988b8c4a40bb9058979a6518cc48",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "129b87e446594aa5bcc21d872e5a3de6",
+          "Name": "SpecType",
+          "Description": "Die ausgewählte SpecType",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Wählen Sie einen Rohrklassentyp aus."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "cf994ded969f416f86d596f76e7257d6",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "b55320e4b9734b52a60ead2f2251a9f6",
+          "Name": "point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9a101098b67243fb8ad0cd522e17a115",
+          "Name": "label",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "119c85c57c0549cbaf8e6ce4993e72c1",
+          "Name": "Label",
+          "Description": "Label",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Analysis.Label.ByPointAndString@Autodesk.DesignScript.Geometry.Point,string",
+      "Replication": "Auto",
+      "Description": "Gibt nach Eingabe eines Punktobjekts und einer Zeichenfolgenbeschriftung ein Beschriftungsobjekt zurück.\n\nLabel.ByPointAndString (point: Point, label: string): Label"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.StringInput, CoreNodeModels",
+      "Id": "5251d19129824d689690899ec9e6b185",
+      "NodeType": "StringInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "9b3421134c1d418eb0981459d1c60ba9",
+          "Name": "",
+          "Description": "String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Erstellt eine Zeichenfolge.",
+      "InputValue": "Testtext"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "dd5f77920df144fa91aafd00130b6819",
+      "End": "adee5dfeafa84d7abbcf539cf2997e6a",
+      "Id": "686c51e863304461bc8b6a49fa21437b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "92a2fd4f57ec49dba0508585a7ac4aea",
+      "End": "6c411145c54b4f0d99ddf9f5fa87f3a1",
+      "Id": "69c04b05b7574a51bbef3881245ce7e9",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "2ad5429765c941d592db3bff9501392a",
+      "End": "2006db17b6944541a3af3d9173ff6fc9",
+      "Id": "60c723fe76bc4359875bf5d5c4930c1e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "da6416ed709247d8b02fd8da5a05e0c8",
+      "End": "3875afd6d5ee43b3b8c7a7eaf338b820",
+      "Id": "a59069c4f8424b44bae1b3711f1dbe81",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "169a03e1da7644658f3b5976250991ab",
+      "End": "e87592b6660246e29c6e1116d7354ebf",
+      "Id": "158e0e76824541fda047334b5bbd739c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "129b87e446594aa5bcc21d872e5a3de6",
+      "End": "664426886be144c883d21747289e7af2",
+      "Id": "7542e4f6bcf8407a938c357c0d4e607c",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": "",
+  "GraphDocumentationURL": "https://github.com/CercopithecusDiana/DynamoSkripte",
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Eigenschaften",
+      "Version": "2.18",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "6.0",
+      "Data": {}
+    }
+  ],
+  "Author": "DL",
+  "Linting": {
+    "activeLinter": "Keine",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.18.1.5096",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Hintergrundvorschau",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "88d29cd8484343118a2ecce8b116a9c0",
+        "Name": "Parameter.CreateProjectParameter",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": false,
+        "X": 1309.9806213197805,
+        "Y": -137.16547118698389
+      },
+      {
+        "Id": "5b690471c0214b3081579a468a472da3",
+        "Name": "Gruppenname",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 365.4502966199945,
+        "Y": -234.37263373780925
+      },
+      {
+        "Id": "e787d84e6d8d4195a231abfc6a8e0ae8",
+        "Name": "Name2 des Parameters",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": false,
+        "X": 369.50425194686585,
+        "Y": -412.55977022378028
+      },
+      {
+        "Id": "33953d53459d4e4a9aceedf752364f1f",
+        "Name": "Gruppentyp des Parameters",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 365.4502966199945,
+        "Y": 60.627366262190776
+      },
+      {
+        "Id": "44ba57357b354836a86b694f92bca287",
+        "Name": "Exemplar oder Typ",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 365.4502966199945,
+        "Y": 207.62736626219078
+      },
+      {
+        "Id": "099a0245cc2c4688a4fb45bf59da130b",
+        "Name": "Categories",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 365.4502966199945,
+        "Y": 354.62736626219078
+      },
+      {
+        "Id": "1275988b8c4a40bb9058979a6518cc48",
+        "Name": "Typ des Parameters",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 707.28517290401055,
+        "Y": -68.8691338299414
+      },
+      {
+        "Id": "cf994ded969f416f86d596f76e7257d6",
+        "Name": "Label.ByPointAndString",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1072.3931984935621,
+        "Y": 210.3784022614833
+      },
+      {
+        "Id": "5251d19129824d689690899ec9e6b185",
+        "Name": "String",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1180.9134694867794,
+        "Y": -478.51409102599735
+      }
+    ],
+    "Annotations": [],
+    "X": -499.85934765012308,
+    "Y": 1017.8260635226852,
+    "Zoom": 1.9262467490681598
+  }
+}
